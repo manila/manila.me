@@ -30,7 +30,7 @@ jobs:
         uses: docker/login-action@v2
         with:
           username: ${{ steps.op-load-secrets.outputs.DOCKER_USERNAME }}
-          password: ${{ steps.op-load-secrets.DOCKER_PASSWORD }}
+          password: ${{ steps.op-load-secrets.outputs.DOCKER_PASSWORD }}
           
       - name: Build and push
         uses: docker/build-push-action@v4
